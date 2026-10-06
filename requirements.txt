@@ -1,0 +1,16 @@
+# Tested together (2026-10, Python 3.13, Apple Silicon Mac; both the mlx-whisper and the
+# faster-whisper paths were run there). Linux/Windows resolve but were not run end to end:
+#   mlx-whisper 0.4.3 / faster-whisper 1.2.1, torch 2.12.1, torchaudio 2.11.0,
+#   speechbrain 1.1.0, scikit-learn 1.9.0, soundfile 0.14.0, numpy 2.4.6, pyannote.audio 4.0.7
+# Apple Silicon uses mlx-whisper; everything else uses faster-whisper.
+mlx-whisper>=0.4.3 ; sys_platform == "darwin" and platform_machine == "arm64"
+faster-whisper>=1.2.1 ; sys_platform != "darwin" or platform_machine != "arm64"
+torch>=2.8
+torchaudio>=2.8
+speechbrain>=1.0.3
+scikit-learn>=1.5
+soundfile>=0.12
+numpy>=1.26
+pyannote.audio>=4.0.1
+# Only for scripts/live_transcribe.py:
+# sounddevice>=0.5

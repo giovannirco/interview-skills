@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+# never commit recordings or transcripts of real interviews
+*.mov
+*.mp4
+*.mkv
+*.m4a
+*.mp3
+*.wav
+*.webm
+*.aac
+*.caf
