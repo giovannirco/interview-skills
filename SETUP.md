@@ -87,6 +87,18 @@ Check:
 ~/.interview-transcribe/venv/bin/python -c "import torch, speechbrain, sklearn, soundfile, pyannote.audio; print('ok')"
 ```
 
+The requirements are minimum versions, so this import check does not reproduce
+the October benchmark or prove transcription and diarization work together.
+After the end-to-end smoke test in step 6 passes, save the installed versions:
+
+```bash
+uv pip freeze --python ~/.interview-transcribe/venv/bin/python > ~/.interview-transcribe/requirements-working.txt
+```
+
+Keep that local snapshot with your environment notes. CLI help, audio extraction
+and transcript formatting can pass even when the ASR or diarization models are
+missing; verify those stages with a short recording before a real interview.
+
 ## 3. Hugging Face token (optional, recommended)
 
 Without it the script still works (speechbrain + spectral clustering, ~93% speaker accuracy in

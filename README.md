@@ -30,6 +30,11 @@ requirements.txt
 
 **Get started:** [SETUP.md](SETUP.md).
 
+`requirements.txt` specifies minimum versions, not a reproducible lockfile. The
+model benchmarks below describe the tested October environment. A fresh install
+can resolve newer packages; run the setup smoke test before trusting it with an
+interview, and save the resolved versions of a working environment.
+
 ---
 
 ## What the skills do
